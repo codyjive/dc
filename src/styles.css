@@ -57,7 +57,7 @@ body {
     grid-template-columns: 1fr;
   }
   .vehicle-offer {
-    width: 100%;
+    width: 95%;
     margin-top: 20px;
   }
   .banner-header {
