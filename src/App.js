@@ -28,7 +28,9 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="header-title">New Honda Lease Specials</h1>
+      <div className="banner-header">
+        <h1>New Honda Lease Specials</h1>
+      </div>
       <SpecialOffers vehicles={vehicles} />
     </div>
   );
