@@ -50,6 +50,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .vehicle-offer {
+    padding: 15px;
+  }
   .special-offers {
     grid-template-columns: 1fr;
   }
@@ -77,8 +80,14 @@ body {
   margin: 0;
 }
 
-h1, h2, .lease-button, .finance-label, .amount, .rate {
+h1, .lease-button, .finance-label, .amount, .rate {
   font-family: 'AvenirNextRoundedPro-Bold', sans-serif;
+}
+
+h2.vehicle-title {
+  font-family: 'AvenirNextRoundedPro-Bold', sans-serif;
+  width: 80%;
+  margin: 0 auto;
 }
 
 p, .vin, .period, .lease-terms, .dots, .disclaimer {
