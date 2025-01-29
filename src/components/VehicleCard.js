@@ -34,15 +34,15 @@ const VehicleCard = ({ vehicle }) => {
             <span className="period">/mo</span>
           </div>
           <div className="lease-terms">
-            {lease_term} MONTHS | ${lease_down_payment} DUE AT SIGNING
+            {lease_term} MONTHS | {lease_down_payment} DUE AT SIGNING
           </div>
         </div>
 
         {finance_rate_plus_percent && (
           <div className="finance-section">
-            <span className="finance-label">FINANCE</span>
-            <span className="dots">........</span>
-            <span className="rate">{finance_rate_plus_percent}%</span>
+            <span className="finance-label">RATES LOW AS</span>
+            <span className="dots">..........</span>
+            <span className="rate">{finance_rate_plus_percent}</span>
           </div>
         )}
 
