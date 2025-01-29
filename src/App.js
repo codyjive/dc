@@ -1,37 +1,59 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import SpecialOffers from './components/SpecialOffers';
-import './styles.css';
+import React, { useState } from 'react';
 
-function App() {
-  const [vehicles, setVehicles] = useState([]);
-  const [loading, setLoading] = useState(true);
+const VehicleCard = ({ vehicle }) => {
+  const {
+    vehicle_side,
+    make,
+    model,
+    trim,
+    year,
+    vin,
+    lease_payment_with_dollar,
+    lease_term,
+    lease_down_payment,
+    finance_rate_plus_percent,
+    combined_disclaimer,
+    link,
+  } = vehicle;
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('https://app.dealercentives.com/auto/feeds/all/Honda/all/23181?ids=%%BN_FEED_ITEM_IDS%%');
-        setVehicles(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return <div className="loading">Loading...</div>;
-  }
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
 
   return (
-    <div className="container">
-      <h1 className="header-title">New Honda Lease Specials</h1>
-      <SpecialOffers vehicles={vehicles} />
+    <div className="vehicle-offer">
+      <h1>{`New ${year} ${make} ${model} ${trim}`}</h1>
+      <p className="vin">VIN: {vin}</p>
+      
+      <div className="vehicle-image">
+        <img src={vehicle_side} alt={`${year} ${make} ${model}`} />
+      </div>
+
+      <div className="offer-details">
+        <div className="lease-button">LEASE OFFER</div>
+        
+        <div className="price">
+          <span className="dollar">$</span>
+          <span className="amount">{lease_payment_with_dollar}</span>
+          <span className="period">/mo</span>
+        </div>
+        
+        <p className="terms">{lease_term} MONTHS | {lease_down_payment} DUE AT SIGNING</p>
+        
+        {finance_rate_plus_percent && (
+          <div className="finance-row">
+            <span className="finance-label">FINANCE</span>
+            <span className="dots">........</span>
+            <span className="rate">{finance_rate_plus_percent}%</span>
+          </div>
+        )}
+        
+        <a className="view-vehicle" href={link}>View Vehicle</a>
+        <p className="view-disclaimer" onClick={() => setShowDisclaimer(!showDisclaimer)}>
+          View Disclaimer
+        </p>
+        {showDisclaimer && <p className="disclaimer">{combined_disclaimer}</p>}
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default VehicleCard;
