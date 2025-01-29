@@ -1,4 +1,4 @@
-/* Honda Styling - Updated for Modern Look */
+/* Honda Styling for Vehicle Card */
 
 @font-face {
   font-family: 'AvenirNext-Bold';
@@ -18,31 +18,6 @@ body {
   color: #00446B;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 20px auto;
-  text-align: center;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header-title {
-  font-size: 2.5rem;
-  font-family: 'AvenirNext-Bold', sans-serif;
-  color: #00446B;
-  margin-bottom: 20px;
-}
-
-.loading {
-  font-size: 1.5rem;
-  color: #0074B3;
-  text-align: center;
-  margin-top: 50px;
-}
-
-/* Card Styling */
 .vehicle-card {
   background-color: #ffffff;
   border-radius: 8px;
@@ -52,39 +27,72 @@ body {
   transition: transform 0.3s ease-in-out;
   font-family: 'AvenirNext-DemiBold', sans-serif;
   border: 2px solid #0074B3;
+  max-width: 350px;
+  margin: auto;
 }
 
 .vehicle-card:hover {
   transform: scale(1.05);
 }
 
-.vehicle-card img {
+.vehicle-title {
+  font-size: 18px;
+  font-family: 'AvenirNext-Bold', sans-serif;
+  color: #00446B;
+}
+
+.vehicle-image {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.lease-offer {
-  background-color: #0074B3;
-  color: white;
-  font-size: 1.8rem;
+.lease-label {
+  font-size: 14px;
+  color: #00446B;
+  font-family: 'AvenirNext-DemiBold', sans-serif;
+}
+
+.lease-price {
+  font-size: 48px;
+  font-family: 'AvenirNext-Bold', sans-serif;
+  color: #0074B3;
+  margin-top: 5px;
+}
+
+.finance-offer {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #00446B;
+  font-family: 'AvenirNext-DemiBold', sans-serif;
+}
+
+.view-vehicle {
+  display: block;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #0074B3;
+  font-family: 'AvenirNext-Bold', sans-serif;
+  text-decoration: none;
+}
+
+.view-disclaimer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #00446B;
+  font-family: 'AvenirNext-DemiBold', sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.disclaimer-modal {
+  background-color: #ffffff;
+  border: 1px solid #0074B3;
   padding: 10px;
-  border-radius: 5px;
-  font-family: 'AvenirNext-Bold', sans-serif;
-}
-
-.btn-primary {
-  background-color: #0074B3;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-family: 'AvenirNext-Bold', sans-serif;
-  color: white;
-  text-transform: uppercase;
-  transition: background 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #00446B;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #00446B;
+  font-family: 'AvenirNext-DemiBold', sans-serif;
+  text-align: left;
 }
