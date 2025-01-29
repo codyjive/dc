@@ -21,7 +21,7 @@ const VehicleCard = ({ vehicle }) => {
       <p className="vin">VIN: {vin}</p>
       
       <div className="vehicle-image">
-        <img src={vehicle_side} alt={`${year} ${make} ${model}`} />
+        <img src={vehicle_side} alt={`${year} {make} {model}`} />
       </div>
 
       <div className="offer-container">
