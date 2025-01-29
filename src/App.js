@@ -27,11 +27,13 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <div>
       <div className="banner-header">
         <h1>New Honda Lease Specials</h1>
       </div>
-      <SpecialOffers vehicles={vehicles} />
+      <div className="container">
+        <SpecialOffers vehicles={vehicles} />
+      </div>
     </div>
   );
 }
