@@ -32,7 +32,7 @@ const VehicleCard = ({ vehicle }) => {
             <span className="period">/mo</span>
           </div>
           <div className="lease-terms">
-            {lease_term} MONTHS | ${lease_down_payment} DUE AT SIGNING
+            {lease_term} MONTHS | {lease_down_payment} DUE AT SIGNING
           </div>
         </div>
 
