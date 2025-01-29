@@ -1,23 +1,33 @@
-
 /* Updated Honda Vehicle Offer Styling */
 
 @font-face {
   font-family: 'AvenirNextRoundedPro-Regular';
-  src: url('../public/fonts/AvenirNextRoundedPro-Reg.otf') format('opentype');
+  src: url('/fonts/AvenirNextRoundedPro-Reg.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'AvenirNextRoundedPro-Bold';
-  src: url('../public/fonts/AvenirNextRoundedPro-Bold.otf') format('opentype');
+  src: url('/fonts/AvenirNextRoundedPro-Bold.otf') format('opentype');
 }
 
 body {
   font-family: 'AvenirNextRoundedPro-Regular', sans-serif;
   color: #181818;
   background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .vehicle-offer {
+  flex: 1 1 48%; /* 50-50 split on desktop */
   max-width: 600px;
   padding: 20px;
   font-family: 'AvenirNextRoundedPro-Regular', sans-serif;
@@ -26,7 +36,12 @@ body {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .vehicle-offer {
+    flex: 1 1 100%; /* Full width on mobile */
+  }
 }
 
 h1 {
