@@ -10,7 +10,7 @@
   src: url('/public/fonts/AvenirNextRoundedPro-Bold.otf') format('opentype');
 }
 
-body {
+.body {
   font-family: 'AvenirNextRoundedPro-Regular', sans-serif;
   color: #181818;
   background-color: #ffffff;
@@ -20,27 +20,35 @@ body {
 
 .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
+}
+
+.special-offers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  width: 100%;
+  justify-items: center;
 }
 
 .vehicle-offer {
-  flex: 1 1 48%; /* 50-50 split on desktop */
-  max-width: 600px;
-  padding: 20px;
-  font-family: 'AvenirNextRoundedPro-Regular', sans-serif;
-  color: #181818;
   background: #ffffff;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 100%;
+  max-width: 600px;
 }
 
 @media (max-width: 768px) {
-  .vehicle-offer {
-    flex: 1 1 100%; /* Full width on mobile */
+  .special-offers {
+    grid-template-columns: 1fr;
   }
 }
 
