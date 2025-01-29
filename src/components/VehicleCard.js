@@ -19,7 +19,7 @@ const VehicleCard = ({ vehicle }) => {
 
   return (
     <div className="vehicle-offer">
-      <h1>New {year} {make} {model} {trim}</h1>
+      <h2>New {year} {make} {model} {trim}</h2>
       <p className="vin">VIN: {vin}</p>
       
       <div className="vehicle-image">
