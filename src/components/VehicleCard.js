@@ -7,7 +7,10 @@ const VehicleCard = ({ vehicle }) => {
     model,
     trim,
     year,
+    vin,
     lease_payment_with_dollar,
+    lease_term,
+    lease_down_payment,
     finance_rate_plus_percent,
     combined_disclaimer,
     link,
@@ -16,26 +19,39 @@ const VehicleCard = ({ vehicle }) => {
   const [showDisclaimer, setShowDisclaimer] = useState(false);
 
   return (
-    <div className="vehicle-card">
-      <h5 className="vehicle-title">{`${year} ${make} ${model} ${trim}`}</h5>
-      <img src={vehicle_side} alt={`${year} ${make} ${model}`} className="vehicle-image" />
-      {lease_payment_with_dollar && (
-        <div className="lease-offer">
-          <span className="lease-label">Lease Special</span>
-          <div className="lease-price">{lease_payment_with_dollar}/mo</div>
+    <div className="vehicle-offer">
+      <h1>{`New ${year} ${make} ${model} ${trim}`}</h1>
+      <p className="vin">VIN: {vin}</p>
+      
+      <div className="vehicle-image">
+        <img src={vehicle_side} alt={`${year} ${make} ${model}`} />
+      </div>
+
+      <div className="offer-details">
+        <div className="lease-button">LEASE OFFER</div>
+        
+        <div className="price">
+          <span className="dollar">$</span>
+          <span className="amount">{lease_payment_with_dollar}</span>
+          <span className="period">/mo</span>
         </div>
-      )}
-      {finance_rate_plus_percent && (
-        <div className="finance-offer">
-          <span className="finance-label">Finance Offer</span>
-          <div className="finance-text">{finance_rate_plus_percent} APR</div>
-        </div>
-      )}
-      <a className="view-vehicle" href={link}>View Vehicle</a>
-      <p className="view-disclaimer" onClick={() => setShowDisclaimer(!showDisclaimer)}>
-        View Disclaimer
-      </p>
-      {showDisclaimer && <div className="disclaimer-modal">{combined_disclaimer}</div>}
+        
+        <p className="terms">{lease_term} MONTHS | {lease_down_payment} DUE AT SIGNING</p>
+        
+        {finance_rate_plus_percent && (
+          <div className="finance-row">
+            <span className="finance-label">FINANCE</span>
+            <span className="dots">........</span>
+            <span className="rate">{finance_rate_plus_percent}%</span>
+          </div>
+        )}
+        
+        <a className="view-vehicle" href={link}>View Vehicle</a>
+        <p className="view-disclaimer" onClick={() => setShowDisclaimer(!showDisclaimer)}>
+          View Disclaimer
+        </p>
+        {showDisclaimer && <p className="disclaimer">{combined_disclaimer}</p>}
+      </div>
     </div>
   );
 };
