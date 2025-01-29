@@ -3,12 +3,12 @@
 
 @font-face {
   font-family: 'AvenirNextRoundedPro-Regular';
-  src: url('/fonts/AvenirNextRoundedPro-Reg.otf') format('opentype');
+  src: url('../public/fonts/AvenirNextRoundedPro-Reg.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'AvenirNextRoundedPro-Bold';
-  src: url('/fonts/AvenirNextRoundedPro-Bold.otf') format('opentype');
+  src: url('../public/fonts/AvenirNextRoundedPro-Bold.otf') format('opentype');
 }
 
 body {
