@@ -87,7 +87,7 @@ h1, .lease-button, .finance-label, .amount, .rate {
 h2.vehicle-title {
   font-family: 'AvenirNextRoundedPro-Bold', sans-serif;
   width: 80%;
-  margin: 0 auto;
+  padding-top: 20px;
 }
 
 p, .vin, .period, .lease-terms, .dots, .disclaimer {
