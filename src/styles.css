@@ -120,6 +120,7 @@ p, .vin, .period, .lease-terms, .dots, .disclaimer {
   border-radius: 5px;
   text-align: center;
   font-weight: bold;
+  font-size: 22px;
   width: 80%;
   margin-top: 20px;
 }
