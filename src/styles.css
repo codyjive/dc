@@ -121,7 +121,7 @@ p, .vin, .period, .lease-terms, .dots, .disclaimer {
   text-align: center;
   font-weight: bold;
   width: 80%;
-  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .lease-amount {
