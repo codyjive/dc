@@ -99,14 +99,14 @@ p, .vin, .period, .lease-terms, .dots, .disclaimer {
 .vehicle-image {
   width: 100%;
   padding: 0;
-  margin: -40px 0;
+  margin: -25px 0 -50px 0;
   box-sizing: border-box;
 }
 
 .vehicle-image img {
   width: 100%;
   height: auto;
-  margin: -40px 0;
+  margin: -25px 0 -50px 0;
 }
 
 .offer-container {
