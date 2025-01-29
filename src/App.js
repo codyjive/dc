@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import SpecialOffers from './components/SpecialOffers';
+import './styles.css';
 
 function App() {
   const [vehicles, setVehicles] = useState([]);
@@ -22,12 +23,12 @@ function App() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   return (
     <div className="container">
-      <h1 className="text-center my-4">Special Offers</h1>
+      <h1 className="header-title">New Honda Lease Specials</h1>
       <SpecialOffers vehicles={vehicles} />
     </div>
   );
