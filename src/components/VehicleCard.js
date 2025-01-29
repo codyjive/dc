@@ -41,7 +41,7 @@ const VehicleCard = ({ vehicle }) => {
         {finance_rate_plus_percent && (
           <div className="finance-section">
             <span className="finance-label">RATES LOW AS</span>
-            <span className="dots">..........</span>
+            <span className="dots">.....</span>
             <span className="rate">{finance_rate_plus_percent}</span>
           </div>
         )}
