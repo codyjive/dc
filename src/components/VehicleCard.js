@@ -17,22 +17,25 @@ const VehicleCard = ({ vehicle }) => {
 
   return (
     <div className="vehicle-card">
+      <h5 className="vehicle-title">{`${year} ${make} ${model} ${trim}`}</h5>
       <img src={vehicle_side} alt={`${year} ${make} ${model}`} className="vehicle-image" />
-      <div className="card-body">
-        <h5 className="card-title">{`${year} ${make} ${model} ${trim}`}</h5>
-        {lease_payment_with_dollar && (
-          <div className="lease-offer">
-            <span className="lease-label">Lease Special</span>
-            <div className="lease-price">{lease_payment_with_dollar}/mo</div>
-          </div>
-        )}
-        {finance_rate_plus_percent && <div>Finance: {finance_rate_plus_percent} APR</div>}
-        <button className="disclaimer-button" onClick={() => setShowDisclaimer(!showDisclaimer)}>
-          View Disclaimer
-        </button>
-        {showDisclaimer && <p className="disclaimer-text">{combined_disclaimer}</p>}
-        <a href={link} className="btn-primary">View Vehicle</a>
-      </div>
+      {lease_payment_with_dollar && (
+        <div className="lease-offer">
+          <span className="lease-label">Lease Special</span>
+          <div className="lease-price">{lease_payment_with_dollar}/mo</div>
+        </div>
+      )}
+      {finance_rate_plus_percent && (
+        <div className="finance-offer">
+          <span className="finance-label">Finance Offer</span>
+          <div className="finance-text">{finance_rate_plus_percent} APR</div>
+        </div>
+      )}
+      <a className="view-vehicle" href={link}>View Vehicle</a>
+      <p className="view-disclaimer" onClick={() => setShowDisclaimer(!showDisclaimer)}>
+        View Disclaimer
+      </p>
+      {showDisclaimer && <div className="disclaimer-modal">{combined_disclaimer}</div>}
     </div>
   );
 };
