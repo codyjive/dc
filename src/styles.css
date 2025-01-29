@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'AvenirNextRoundedPro-Regular';
-  src: url('/fonts/AvenirNextRoundedPro-Reg.otf') format('opentype');
+  src: url('../public/fonts/AvenirNextRoundedPro-Reg.otf') format('opentype');
 }
 
 @font-face {
