@@ -137,8 +137,8 @@ p, .vin, .period, .lease-terms, .dots, .disclaimer {
 }
 
 .amount .one {
-  margin-left: -3px;
-  margin-right: -3px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .period {
