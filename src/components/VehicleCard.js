@@ -17,20 +17,24 @@ const VehicleCard = ({ vehicle }) => {
 
   const [showDisclaimer, setShowDisclaimer] = useState(false);
 
+  const formatAmount = (amount) => {
+    return amount.toString().replace(/1/g, '<span class="one">1</span>');
+  };
+
   return (
     <div className="vehicle-offer">
-      <h2>New {year} {make} {model} {trim}</h2>
+      <h2 className="vehicle-title">New {year} {make} {model} {trim}</h2>
       <p className="vin">VIN: {vin}</p>
       
       <div className="vehicle-image">
-        <img src={vehicle_side} alt={`${year} ${make} ${model}`} />
+        <img src={vehicle_side} alt={`${year} {make} {model}`} />
       </div>
 
       <div className="offer-container">
         <div className="lease-section">
           <div className="lease-button">LEASE OFFER</div>
           <div className="lease-amount">
-            <span className="amount">{lease_payment_with_dollar}</span>
+            <span className="amount" dangerouslySetInnerHTML={{ __html: formatAmount(lease_payment_with_dollar) }} />
             <span className="period">/mo</span>
           </div>
           <div className="lease-terms">
