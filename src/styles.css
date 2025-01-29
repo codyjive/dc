@@ -80,7 +80,7 @@ h1 {
   font-size: 28px;
   text-align: center;
   font-weight: bold;
-  width: fit-content;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -100,8 +100,9 @@ h1 {
 
 .lease-terms {
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 20px;
+  margin-top: -20px;
 }
 
 .finance-section {
