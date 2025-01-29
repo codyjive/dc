@@ -4,7 +4,6 @@ import VehicleCard from './VehicleCard';
 const SpecialOffers = ({ vehicles }) => {
   return (
     <div className="container">
-      <h1 className="header-title">New Honda Lease Specials</h1>
       <div className="special-offers">
         {vehicles.length > 0 ? (
           vehicles.map((vehicle) => (
